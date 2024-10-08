@@ -14,6 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: v52
+      - uses: ./.github/actions/test-action/
       - name: Run echo
         run: echo ${{ github.ref }}
       - name: Run echo
